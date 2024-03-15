@@ -13,12 +13,13 @@
       ./user.nix
       ./kernel.nix
     ];
-
   nix.gc = {
-                automatic = true;
-                dates = "weekly";
-                options = "--delete-older-than 7d";
-        };
+    automatic = true;
+    options = "--delete-older-than 5d";
+    dates = "Sun 19:00";
+  };
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" ];
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   nixpkgs.config.allowUnfree = true; 
   programs.nix-ld.enable = true;

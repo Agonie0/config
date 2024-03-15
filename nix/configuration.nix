@@ -21,7 +21,7 @@
         };
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   nixpkgs.config.allowUnfree = true; 
-
+  programs.nix-ld.enable = true;
   services.v2raya.enable = true;
   time.timeZone = "Asia/Shanghai";
 

@@ -12,12 +12,7 @@
  	        "--enable-wayland-ime"
       ];
     })
-      (vscode-with-extensions.override {
-        vscodeExtensions = with vscode-extensions; [
-          jnoortheen.nix-ide
-          ms-ceintl.vscode-language-pack-zh-hans
-      ];
-    })
+      vscode
       nodejs 
       gtk4
       xdg-utils

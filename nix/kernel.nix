@@ -8,11 +8,10 @@
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
+        efiSysMountPoint = "/boot/efi";
       };
       grub = {
         efiSupport = true;
-        #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
         gfxmodeEfi = "1920x1080";
         device = "nodev";
    };

@@ -5,7 +5,7 @@
       users.agonie = {
        isNormalUser = true;
        home = "/home/agonie";
-       extraGroups = [ "wheel" "networkmanager" ];
+       extraGroups = [ "wheel" "networkmanager" "adbusers"];
    };
   };
 }

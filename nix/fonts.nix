@@ -2,10 +2,10 @@
 {
   fonts = {
      packages = with pkgs; [
-       fira-code-nerdfont
+      fira-code-nerdfont
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-       noto-fonts-emoji
+      noto-fonts-emoji
      ];
      fontconfig = {
        antialias = true;

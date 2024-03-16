@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   environment = {
     sessionVariables.NIXOS_OZONE_WL = "1";
@@ -12,7 +12,13 @@
  	        "--enable-wayland-ime"
       ];
     })
-      vscode
+    (vscode.override {
+        commandLineArgs = [
+	        "--gtk-version=4"
+ 	        "--enable-wayland-ime"
+      ];
+    })
+      inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
       nodejs 
       gtk4
       xdg-utils
@@ -22,6 +28,16 @@
       git
       hyprpaper
       telegram-desktop
+      nwg-look
+      xdg-user-dirs
+      unzip
+      xdg-desktop-portal-hyprland
+      hyprpaper
+      nil
+      yazi
+      dolphin
+      ark
+      axel
     ];
    };
 }

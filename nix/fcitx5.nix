@@ -9,7 +9,7 @@
         fcitx5-gtk
         fcitx5-nord
       	fcitx5-chinese-addons
-   	];
-      };
- };	
+   	  ];
+    };
+  };	
 }

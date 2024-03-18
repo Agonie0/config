@@ -19,7 +19,6 @@
       ];
     })
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
-      nodejs 
       gtk4
       xdg-utils
       qq
@@ -28,15 +27,11 @@
       git
       hyprpaper
       telegram-desktop
-      nwg-look
       xdg-user-dirs
-      unzip
       xdg-desktop-portal-hyprland
       hyprpaper
       nil
       yazi
-      dolphin
-      ark
       axel
     ];
    };

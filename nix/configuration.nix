@@ -26,10 +26,10 @@
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   services.gvfs.enable = true;
   nixpkgs.config.allowUnfree = true; 
-services.udev.packages = [ pkgs.android-udev-rules ];
+  services.udev.packages = [ pkgs.android-udev-rules ];
   programs.nix-ld.enable = true;
 
-  programs.dconf.enable = true;
+  #programs.dconf.enable = true;
 
   services.v2raya.enable = true;
 

@@ -4,7 +4,7 @@
     sessionVariables.NIXOS_OZONE_WL = "1";
     systemPackages = with pkgs; [
       neovim
-      alacritty
+      kitty
       rofi-wayland
       (microsoft-edge.override {
         commandLineArgs = [
@@ -18,6 +18,13 @@
  	        "--enable-wayland-ime"
       ];
     })
+      (pkgs.wrapOBS {
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+          obs-backgroundremoval
+          obs-pipewire-audio-capture
+      ];
+    })
       inputs.hyprland-contrib.packages.${pkgs.system}.grimblast
       gtk4
       xdg-utils
@@ -27,12 +34,15 @@
       git
       hyprpaper
       telegram-desktop
+      yesplaymusic
       xdg-user-dirs
       xdg-desktop-portal-hyprland
       hyprpaper
       nil
       yazi
       axel
+      mako
+      alejandra
     ];
    };
 }

@@ -22,7 +22,7 @@
   nix.optimise.automatic = true;
   programs.adb.enable = true;
   nix.optimise.dates = [ "03:45" ];
-
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   services.gvfs.enable = true;
   nixpkgs.config.allowUnfree = true; 
@@ -30,6 +30,8 @@
   programs.nix-ld.enable = true;
 
   #programs.dconf.enable = true;
+
+  
 
   services.v2raya.enable = true;
 
